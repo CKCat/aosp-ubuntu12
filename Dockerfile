@@ -9,6 +9,7 @@ RUN useradd --create-home --no-log-init --shell /bin/bash developer \
 USER developer
 ENV HOME /home/developer
 WORKDIR /home/developer
+ENV PATH="${JDK_PATH}/bin:${PATH}"
 
 CMD ["/bin/bash"]
 
